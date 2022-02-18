@@ -21,7 +21,7 @@ def clearer():
 # funtion for the displaying signs
 
 def signs(signed):
-    first_number = int(entryWindow.get())
+    first_number = float(entryWindow.get())
     global f_num
     global sign
     sign = signed
@@ -65,9 +65,9 @@ button_6 = tk.Button(root, text='6', padx=40, pady=20, command=lambda: button_va
 button_7 = tk.Button(root, text='7', padx=40, pady=20, command=lambda: button_values(7))
 button_8 = tk.Button(root, text='8', padx=40, pady=20, command=lambda: button_values(8))
 button_9 = tk.Button(root, text='9', padx=40, pady=20, command=lambda: button_values(9))
+button_decimal = tk.Button(root, text='.', pady=20, padx=43,command=lambda: button_values('.'))
 
 button_add = tk.Button(root, text='+', pady=20, padx=45, command = lambda:signs("+"))
-button_decimal = tk.Button(root, text='.', pady=20, padx=43)
 button_subtract = tk.Button(root, text='-', pady=20, padx=45,command = lambda:signs("-"))
 button_multiply = tk.Button(root, text='x', pady=20, padx=45,command = lambda:signs("*"))
 button_divide = tk.Button(root, text='/', pady=20, padx=45, command = lambda:signs("/"))
