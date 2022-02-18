@@ -14,14 +14,21 @@ def button_values(number):
 # Function for clear
 
 def clearer():
-    entryWindow.delete(-1)
+    entryWindow.delete(0, tk.END)
 
 
 # funtion for the displaying signs
 
-def signs(sign):
-    initial = entryWindow.get()
-    entryWindow.insert(0, str(initial) + sign)
+def signs():
+    first_number = int(entryWindow.get())
+    global f_num
+    f_num = first_number
+    entryWindow.delete(0,tk.END)
+
+def result():
+    next_number = int(entryWindow.get())
+    entryWindow.delete(0,tk.END)
+    entryWindow.insert(0,next_number+f_num)
 
 
 # root_title and the window size
@@ -30,6 +37,8 @@ root_title = root.title('Calculator')
 # The entry window
 entryWindow = tk.Entry(root, width=40, borderwidth=5)
 entryWindow.grid(column=0, row=0, columnspan=4)
+
+
 # The buttons of the numbers and signs
 button_0 = tk.Button(root, text='0', padx=40, pady=20, command=lambda: button_values(0))
 button_1 = tk.Button(root, text='1', padx=40, pady=20, command=lambda: button_values(1))
@@ -42,12 +51,12 @@ button_7 = tk.Button(root, text='7', padx=40, pady=20, command=lambda: button_va
 button_8 = tk.Button(root, text='8', padx=40, pady=20, command=lambda: button_values(8))
 button_9 = tk.Button(root, text='9', padx=40, pady=20, command=lambda: button_values(9))
 
-button_add = tk.Button(root, text='+', pady=20, padx=45, command=lambda: signs("+"))
+button_add = tk.Button(root, text='+', pady=20, padx=45, command=signs)
 button_decimal = tk.Button(root, text='.', pady=20, padx=43)
-button_subtract = tk.Button(root, text='-', pady=20, padx=45, command=lambda: signs("-"))
-button_multiply = tk.Button(root, text='x', pady=20, padx=45, command=lambda: signs("*"))
-button_divide = tk.Button(root, text='/', pady=20, padx=45, command=lambda: signs("//"))
-button_result = tk.Button(root, text='=', pady=20, padx=150)
+button_subtract = tk.Button(root, text='-', pady=20, padx=45, command=signs)
+button_multiply = tk.Button(root, text='x', pady=20, padx=45, command=signs)
+button_divide = tk.Button(root, text='/', pady=20, padx=45, command=signs)
+button_result = tk.Button(root, text='=', pady=20, padx=150,command=result)
 button_clear = tk.Button(root, text='clear', pady=20, padx=30, command=clearer)
 
 # Placing the buttons
