@@ -15,20 +15,35 @@ def button_values(number):
 
 def clearer():
     entryWindow.delete(0, tk.END)
+    f_num = 0
 
 
 # funtion for the displaying signs
 
-def signs():
+def signs(signed):
     first_number = int(entryWindow.get())
     global f_num
+    global sign
+    sign = signed
     f_num = first_number
     entryWindow.delete(0,tk.END)
 
 def result():
     next_number = int(entryWindow.get())
     entryWindow.delete(0,tk.END)
-    entryWindow.insert(0,next_number+f_num)
+
+    final_result = 0
+    if sign == "+":
+        final_result=f_num+next_number
+    elif sign == "-":
+        final_result=f_num-next_number
+    elif sign == "/":
+        final_result=f_num/next_number
+    elif sign == "*":
+        final_result=f_num*next_number
+
+
+    entryWindow.insert(0,final_result)
 
 
 # root_title and the window size
@@ -51,11 +66,11 @@ button_7 = tk.Button(root, text='7', padx=40, pady=20, command=lambda: button_va
 button_8 = tk.Button(root, text='8', padx=40, pady=20, command=lambda: button_values(8))
 button_9 = tk.Button(root, text='9', padx=40, pady=20, command=lambda: button_values(9))
 
-button_add = tk.Button(root, text='+', pady=20, padx=45, command=signs)
+button_add = tk.Button(root, text='+', pady=20, padx=45, command = lambda:signs("+"))
 button_decimal = tk.Button(root, text='.', pady=20, padx=43)
-button_subtract = tk.Button(root, text='-', pady=20, padx=45, command=signs)
-button_multiply = tk.Button(root, text='x', pady=20, padx=45, command=signs)
-button_divide = tk.Button(root, text='/', pady=20, padx=45, command=signs)
+button_subtract = tk.Button(root, text='-', pady=20, padx=45,command = lambda:signs("-"))
+button_multiply = tk.Button(root, text='x', pady=20, padx=45,command = lambda:signs("*"))
+button_divide = tk.Button(root, text='/', pady=20, padx=45, command = lambda:signs("/"))
 button_result = tk.Button(root, text='=', pady=20, padx=150,command=result)
 button_clear = tk.Button(root, text='clear', pady=20, padx=30, command=clearer)
 
