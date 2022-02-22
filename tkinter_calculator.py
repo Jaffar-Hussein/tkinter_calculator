@@ -1,7 +1,7 @@
 import tkinter as tk
 
 root = tk.Tk()
-
+root.iconbitmap('./my.ico')
 
 # function for taking the value of the buttons
 

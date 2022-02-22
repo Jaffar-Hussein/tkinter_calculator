@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bfa92f61-7e52-4dac-b03c-857b1d675dc6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tkinter_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tkinter_calculator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +82,9 @@
       <workItem from="1645190168147" duration="945000" />
       <workItem from="1645197640997" duration="3388000" />
       <workItem from="1645201293716" duration="533000" />
+      <workItem from="1645211716836" duration="224000" />
+      <workItem from="1645339252626" duration="867000" />
+      <workItem from="1645507026693" duration="323000" />
     </task>
     <servers />
   </component>
@@ -94,6 +98,6 @@
     </ignored-roots>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Tkinter_Calculator$tkinter_calculator.coverage" NAME="tkinter_calculator Coverage Results" MODIFIED="1645201296582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Tkinter_Calculator$tkinter_calculator.coverage" NAME="tkinter_calculator Coverage Results" MODIFIED="1645507348249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
